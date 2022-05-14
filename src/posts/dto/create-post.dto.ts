@@ -10,6 +10,7 @@ export class CreatePostDto {
     message: 'Заголовок должен быть больше 4 и меньше 50 символов',
   })
   readonly title: string;
+
   @ApiProperty({
     example:
       'Сегодня ровно в 09:00 утра, Разработчик устроился в компанию и стал счастлив.',
@@ -19,11 +20,13 @@ export class CreatePostDto {
     message: 'Содержание должен быть больше 4 и меньше 300 символов',
   })
   readonly content: string;
+
   @ApiProperty({
     example: [],
+    isArray: true,
+    required: false,
     type: 'object',
     description: 'Вложения к посту',
   })
-  @Length(0, 10)
-  files: Array<Express.Multer.File>;
+  files?: Array<Express.Multer.File>;
 }

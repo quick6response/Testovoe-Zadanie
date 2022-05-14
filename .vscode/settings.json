@@ -45,7 +45,7 @@
   "workbench.colorTheme": "Dark",
   //Разрешить уменьшение размера вкладок, когда доступного места недостаточно для отображения всех вкладок одновременно.
   "workbench.editor.tabSizing": "shrink",
-  "workbench.activityBar.visible": false,
+  "workbench.activityBar.visible": true,
   "workbench.iconTheme": "helium-icon-theme",
   "workbench.startupEditor": "newUntitledFile",
 

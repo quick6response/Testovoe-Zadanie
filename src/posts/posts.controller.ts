@@ -17,12 +17,17 @@ import { PostsService } from './posts.service';
 import { FilesInterceptor } from '@nestjs/platform-express';
 import { JwtAuthGuard } from 'src/auth/jwt-auth.guard';
 import { throws } from 'assert';
-import { ApiOperation, ApiResponse, ApiTags } from '@nestjs/swagger';
+import {
+  ApiBearerAuth,
+  ApiOperation,
+  ApiResponse,
+  ApiTags,
+} from '@nestjs/swagger';
 import { Post as PostModel } from './posts.model';
 import { FindPostDto } from './dto/find-post.dto';
 import { Attachment } from 'src/attachment/attachment-model';
 import { UpdatePostDto } from './dto/update-post.dto';
-
+@ApiBearerAuth()
 @ApiTags('Блог')
 @Controller('posts')
 export class PostsController {

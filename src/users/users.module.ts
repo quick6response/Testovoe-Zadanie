@@ -1,5 +1,4 @@
 import { forwardRef, Module } from '@nestjs/common';
-import { UsersController } from './users.controller';
 import { UsersService } from './users.service';
 import { SequelizeModule } from '@nestjs/sequelize';
 import { User } from './users.model';
@@ -8,7 +7,7 @@ import { Post } from '../posts/posts.model';
 import { Attachment } from 'src/attachment/attachment-model';
 
 @Module({
-  controllers: [UsersController],
+  controllers: [],
   providers: [UsersService],
   imports: [
     SequelizeModule.forFeature([User, Post, Attachment]),

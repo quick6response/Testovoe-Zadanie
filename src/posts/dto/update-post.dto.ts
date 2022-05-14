@@ -1,4 +1,4 @@
-import { ApiProperty } from '@nestjs/swagger';
+import { ApiProperty, ApiPropertyOptional } from '@nestjs/swagger';
 import { IsOptional, Length } from 'class-validator';
 
 export class UpdatePostDto {
@@ -28,10 +28,11 @@ export class UpdatePostDto {
   readonly content: string;
 
   @ApiProperty({
-    example: Array,
+    example: [],
+    isArray: true,
+    required: false,
     type: 'object',
     description: 'Вложения к посту',
   })
-  @IsOptional({})
   files?: Array<Express.Multer.File>;
 }
