@@ -25,7 +25,10 @@
 ## Description
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
-Проект находится на адресе: https://number.apiuser.ru:2083/api
+
+[Api URL](https://number.apiuser.ru:2083/api) Проект находится на адресе: https://number.apiuser.ru:2083/api.
+
+[Docs](https://number.apiuser.ru:2083/api/docs/#/) Докумениация по REST API 
 
 ## Installation
 
