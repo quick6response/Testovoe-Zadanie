@@ -19,7 +19,7 @@ import { join, resolve } from 'path';
       envFilePath: `.env`,
     }),
     ServeStaticModule.forRoot({
-      exclude: ['/api*'],
+      // exclude: ['/api*'],
       rootPath: resolve(__dirname, 'static'),
     }),
     SequelizeModule.forRoot({
